@@ -24,9 +24,9 @@ This message shows that your installation appears to be working correctly.
 
 ##  Setup Iniziale
 
-1. scaricare il materiale necessario per il workshop
+1. scaricare il materiale necessario per il workshop (questo reposotory)
 ```
-$ git clone https://github.com/leonardobrunilvr/WorkshopElastic
+$ git clone https://github.com/luisaviaroma/WorkshopRefactoringElasticsearchIndex
 ```
 2. avviare docker compose
 ```
@@ -52,5 +52,4 @@ http://docs.searchkit.co/stable/
    [Guida per provare l'indice dei Calciatori con SearchKit](./README.fifa.md)
 
 :shipit:
-:notbaad:
-:nerdyface:
+:notbad:
