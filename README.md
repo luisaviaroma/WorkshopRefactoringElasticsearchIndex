@@ -54,3 +54,4 @@ http://docs.searchkit.co/stable/
 :shipit:
 :feelsgood:
 :trollface:
+:bowtie:
