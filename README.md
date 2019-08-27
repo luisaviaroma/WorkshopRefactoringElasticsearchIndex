@@ -1,0 +1,53 @@
+
+
+# LVR + Seacom + ALT = Elastic Workshop 
+
+##  Prerequisiti
+
+1. Istallare Docker Toolbox/Docker Desktop per la propria piattaforma (Linux/MacOSX/Windows)  
+    https://runnable.com/docker/getting-started/
+2. Istallare Docker Compose per la propria piattaforma (Linux/MacOSX/Windows)  
+    https://docs.docker.com/compose/install/ (già incluso nelle ultime versioni di Docker Toolbox/Docker Desktop per MacOSX e Windows)
+3. Testatare l'installazione - per assicurarsi che docker sia stato installato in modo corretto
+```
+$ docker --version
+$ docker run hello-world
+```
+4. Se anche Docker ti saluta, tutto è funzionante, puoi partecipare al workshop :+1:
+```
+$ docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+...
+```
+
+##  Setup Iniziale
+
+1. scaricare il materiale necessario per il workshop
+```
+$ git clone https://github.com/leonardobrunilvr/WorkshopElastic
+```
+2. avviare docker compose
+```
+$ docker-compose up
+```
+(fare attenzione ad eventuali prompt di Docker Desktop che possono richiedere l'accesso a risorse locali o il reinserimento delle credenziali)
+
+Il docker-compose installa un'istanza di ElasticSearch, Kibana ed il runt-time per Node.js su cui viene eseguita una WebApp che espone
+quattro versioni diverse che usano SearchKit.
+
+*SearchKit* è un framework che espone UI components implementati in React che permette in modo molto semplice e rapido il collegamento ad un indice Elastic
+http://docs.searchkit.co/stable/
+
+
+- WebApp standard Searchkit: http://localhost:3000/
+- WebApp per l'esecuzione degli UnitTests: http://localhost:3000/#test
+- WebApp che punta l'indice Elastic dei Libri: http://localhost:3000/#book
+
+   [Guida per provare l'indice dei Libri con SearchKit](./README.books.md)
+- WebApp che punta l'indice Elastic dei Calciatori: http://localhost:3000/#fifa
+
+   [Guida per provare l'indice dei Calciatori con SearchKit](./README.fifa.md)
+
+:shipit:
