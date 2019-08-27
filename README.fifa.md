@@ -4,7 +4,7 @@
 
 #####  (1) Controllo del Mapping creato degli indici
 
-###### Alcuni campi devono essere normalizzati in modo da utilizzarli in modo opportuno in SearchKit
+###### Alcuni campi devono essere modificati in modo da utilizzarli in modo opportuno in SearchKit
 
 ```yaml
 GET luisa1-fifa
@@ -387,7 +387,7 @@ POST _reindex
 
 ##### (5) L'alias utilizzato da SearchKit adesso dovrà utilizzare solo il nuovo indice
 
-###### Grazie all'utilizzo dell'alias non avremo downtime lato applicativo! :)
+###### Grazie all'utilizzo dell'alias non avremo downtime lato applicativo! :smile:
 
 ```yaml
 POST _aliases

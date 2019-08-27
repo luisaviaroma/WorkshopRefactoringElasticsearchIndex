@@ -1,10 +1,8 @@
 # SearchKit-demo-book
 
-**npm install** oppure **yarn** per installare i node_modules di SearchKit.
-
 #####  (1) Controllo del Mapping creato degli indici
 
-###### Alcuni campi devono essere normalizzati in modo da utilizzarli in modo opportuno in SearchKit
+###### Alcuni campi devono essere modificati in modo da utilizzarli in modo opportuno in SearchKit
 
 ```yaml
 GET luisa1-book
@@ -21,7 +19,7 @@ POST _aliases
   ]
 }
 
-# In SearchKit si eve utilizzare l'alias luisaviaroma-book!!!
+# In SearchKit si deve utilizzare l'alias luisaviaroma-book!!!
 ```
 
 
@@ -95,7 +93,7 @@ PUT luisa2-book
 
 
 
-##### (3) Prima di re-indicizzare i dati è necessario creare una ingest pipeline per normalizzare il field _genres_ e poterlo utilizzare come facet
+##### (3) Prima di re-indicizzare i dati è necessario creare una ingest pipeline per modificare il field _genres_ e poterlo utilizzare come facet
 
 ```yaml
 PUT _ingest/pipeline/book-pipeline
@@ -150,7 +148,7 @@ POST _reindex
 
 ##### (5) L'alias utilizzato da SearchKit adesso dovrà utilizzare solo il nuovo indice
 
-###### Grazie all'utilizzo dell'alias non avremo downtime lato applicativo! :)
+###### Grazie all'utilizzo dell'alias non avremo downtime lato applicativo! :smile:
 
 ```yaml
 POST _aliases

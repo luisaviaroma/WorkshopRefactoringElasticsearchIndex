@@ -52,4 +52,5 @@ http://docs.searchkit.co/stable/
    [Guida per provare l'indice dei Calciatori con SearchKit](./README.fifa.md)
 
 :shipit:
-:notbad:
+:feelsgood:
+:trollface:
