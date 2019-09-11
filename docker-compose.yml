@@ -1,8 +1,14 @@
 version: '3'
 services:
   elasticsearch:
-    #image: docker.elastic.co/elasticsearch/elasticsearch:6.8.2
-    image: tower01-it-d.local:5001/elasticsearch/elasticsearch:6.8.2    
+    # PER UTILIZZARE IL REGISTRY LOCALE AGGIUNGERE QUESTA RIGA ALLE PREFERENZE DEL DOCKER DAEMON
+    #"insecure-registries" : [
+    # "tower01-it-d.local:5000",
+    # "tower01-it-d.local:5001"
+    #]
+    # E SCOMMENTARE LA RIGA SEGUENTE 
+    #image: tower01-it-d.local:5001/elasticsearch/elasticsearch:6.8.2    
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.2
     ports:
     - "9200:9200"
     user:
@@ -15,8 +21,14 @@ services:
       - -Ehttp.cors.allow-headers=Content-Type,Content-Length,Authorization
       - -Ehttp.cors.allow-credentials=true
   kibana:
-    #image: docker.elastic.co/kibana/kibana:6.8.2
-    image: tower01-it-d.local:5001/kibana/kibana:6.8.2
+    # PER UTILIZZARE IL REGISTRY LOCALE AGGIUNGERE QUESTA RIGA ALLE PREFERENZE DEL DOCKER DAEMON
+    #"insecure-registries" : [
+    # "tower01-it-d.local:5000",
+    # "tower01-it-d.local:5001"
+    #]
+    # E SCOMMENTARE LA RIGA SEGUENTE 
+    #image: tower01-it-d.local:5001/kibana/kibana:6.8.2
+    image: docker.elastic.co/kibana/kibana:6.8.2
     ports:
     - "5601:5601"
     links:
