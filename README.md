@@ -4,16 +4,17 @@
 
 ##  Prerequisiti
 
-1. Istallare Docker (Docker Desktop) per la propria piattaforma (Linux/MacOSX/Windows)  
+1. Installare Docker (Docker Desktop) per la propria piattaforma (Linux/MacOSX/Windows)  
     https://runnable.com/docker/getting-started/
-2. Istallare Docker Compose per la propria piattaforma (Linux/MacOSX/Windows)  
+2. Installare Docker Compose per la propria piattaforma (Linux/MacOSX/Windows)  
     https://docs.docker.com/compose/install/ (già incluso nelle ultime versioni di Docker Desktop per MacOSX e Windows)
-3. Testatare l'installazione - per assicurarsi che docker sia stato installato in modo corretto
+3. Fare attenzione ad eventuali prompt di Docker Desktop che possono richiedere l'accesso a risorse locali o il reinserimento delle credenziali
+4. Testare l'installazione: per assicurarsi che docker sia stato installato in modo corretto
 ```
 $ docker --version
 $ docker run hello-world
 ```
-4. Se anche Docker ti saluta, tutto è funzionante, puoi partecipare al workshop :+1:
+5. Se anche Docker ti saluta, tutto è funzionante, puoi partecipare al workshop :+1:
 ```
 $ docker run hello-world
 
@@ -28,11 +29,14 @@ This message shows that your installation appears to be working correctly.
 ```
 $ git clone https://github.com/luisaviaroma/WorkshopRefactoringElasticsearchIndex
 ```
-2. avviare docker compose
+2. cambiare working directory
+```
+$ cd WorkshopRefactoringElasticsearchIndex
+```
+3. avviare docker compose
 ```
 $ docker-compose up
 ```
-(fare attenzione ad eventuali prompt di Docker Desktop che possono richiedere l'accesso a risorse locali o il reinserimento delle credenziali)
 
 Il docker-compose installa un'istanza di ElasticSearch, Kibana ed il runt-time per Node.js su cui viene eseguita una WebApp che espone
 quattro versioni diverse che usano SearchKit.
